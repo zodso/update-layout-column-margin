@@ -1,0 +1,14 @@
+@each $layoutColumn in $layoutColumns {
+  @each $margin in $margins {
+    $fullWidth: 100;
+    $columnWidth: $fullWidth / $layoutColumn;
+    $result: append($columnWidth + "% - ", $margin + "%");
+    $resultMargin: $margin / 2;
+    &[data-show-col="#{$layoutColumn}"] {
+      &[data-show-gap="#{$margin}"] {
+        width: calc(#{$result});
+        margin: $resultMargin#{"%"};
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.single-post {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  &.truncate {
+    .single-post__content {
+      .subtitle {
+        display: none;
+      }
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  @import "./transitions";
+  &__content {
+    width: 100%;
+    height: auto;
+    padding: 0 8.6%;
+    padding-bottom: 8px;
+    span,
+    p,
+    h3,
+    h4 {
+      color: $white;
+      line-height: 100%;
+    }
+    .category {
+      line-height: 205%;
+      text-transform: capitalize;
+      display: inline-block;
+    }
+    .title {
+      font-size: 195%;
+      line-height: 115%;
+      font-weight: 100;
+      text-transform: capitalize;
+      overflow: hidden;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .author {
+      line-height: 265%;
+    }
+    .subtitle,
+    .subtitle-truncated {
+      font-size: 115%;
+      line-height: 115%;
+      font-weight: 100;
+      position: relative;
+      span {
+        display: inline-block;
+      }
+      .original,
+      .updated {
+        line-height: 115%;
+      }
+      .updated {
+        &:after {
+          content: "...";
+          position: absolute;
+        }
+      }
+    }
+    .subtitle {
+      overflow: hidden;
+    }
+    &.truncated {
+      .subtitle {
+        display: none;
+      }
+    }
+  }
+  &__view-more {
+    text-align: center;
+    width: 100%;
+    p {
+      color: $white;
+      font-size: 12px;
+      text-decoration: underline;
+      @include breakpoint(mobile-landscape) {
+        font-size: 14px;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  @import "./utils/layoutUpdater";
+}

@@ -1,0 +1,65 @@
+body.fixed {
+  position: fixed;
+}
+.update-layout-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding: 20px;
+  background: $white;
+  border-bottom: 1px solid $grey;
+  font-size: 12px;
+  z-index: 1;
+  @include breakpoint(mobile-landscape) {
+    position: relative;
+    padding-top: 135px;
+  }
+  &__logo {
+    a {
+      float: left;
+      line-height: 0px;
+    }
+    img {
+      width: 85px;
+      @include breakpoint(mobile-landscape) {
+        width: 186px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-size: 20px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px $grey;
+    }
+  }
+}
+
+.update-layout-page {
+  padding-bottom: 40px;
+  position: relative;
+  .posts-container {
+    padding: 76px 10px 10px 10px;
+    @include breakpoint(mobile-landscape) {
+      padding: 10px;
+    }
+  }
+}
+
+.update-layout-footer {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  background: $white;
+  border-top: 1px solid $grey;
+  font-size: 12px;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

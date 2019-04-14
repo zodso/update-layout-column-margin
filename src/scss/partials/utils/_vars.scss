@@ -1,0 +1,46 @@
+// BREAKPOINT VARIABLES MEDIA QUERY
+// ----------------------
+// from 0 to 479 o mobile-portrait
+// from 480 to 767 o mobile-landscape
+$screenXsMin: 320px;
+$break-to-mobile-landscape: 480px;
+$break-to-mobile-large-landscape: 736px;
+
+// from 768 to 1023 o tablet-portrait
+$break-to-tablet-portrait: 768px;
+
+// from 1024 to 1279 o tablet-landscape
+$break-to-tablet-landscape: 1024px;
+
+// from 1280 to 1365 o desktop-small
+$break-to-desktop-small: 1080px;
+
+// from 1600 to 2199 o desktop-medium
+$break-to-desktop-medium: 1600px;
+
+// from 2200 to infinite o desktop-large
+$break-to-desktop-large: 2200px;
+
+// breakpoints list with name and value
+$breakpointList: (
+  mobile-landscape: $break-to-mobile-landscape,
+  tablet-portrait: $break-to-tablet-portrait,
+  tablet-landscape: $break-to-tablet-landscape,
+  desktop-small: $break-to-desktop-small,
+  desktop-medium: $break-to-desktop-medium,
+  desktop-large: $break-to-desktop-large
+);
+
+// LAYOUT UPDATER & FONT ADAPTER
+// -----------------------------
+
+$layoutColumns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$margins: 0, 1.4, 2.8, 4.8, 5.6;
+
+// COLOR DEFINITION
+// ----------------------
+
+// Base color
+$white: #fff;
+$black: #000;
+$grey: #a9a9a9;

@@ -1,0 +1,13 @@
+@mixin breakpoint($point: 0) {
+  $mediaquery: null;
+
+  @if map_has_key($breakpointList, $point) {
+    $mediaquery: map_get($breakpointList, $point);
+  }
+  @else {
+    $mediaquery: unquote("#{$point}");
+  }
+  @media (min-width: $mediaquery) {
+    @content;
+  }
+}

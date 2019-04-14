@@ -1,0 +1,84 @@
+.update-layout {
+  &-open-menu {
+    position: relative;
+    width: 24px;
+    height: 20px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    @include breakpoint(mobile-landscape) {
+      display: none;
+    }
+  }
+  &-close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: 0;
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    @include breakpoint(mobile-landscape) {
+      display: none;
+    }
+  }
+}
+
+.posts-filters {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  background: $white;
+  padding: 40px 5% 20px 5%;
+  border-bottom: 1px solid $grey;
+  transition: all 0.25s ease-in;
+  &.open {
+    opacity: 1;
+    top: 0;
+  }
+  &__filter {
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 0;
+    label {
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+    select {
+      width: 100%;
+      padding: 8px 4px;
+      &#select_column {
+        display: none;
+        @include breakpoint(mobile-landscape) {
+          display: block;
+        }
+        &.mobile {
+          display: block;
+          @include breakpoint(mobile-landscape) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-landscape) {
+    opacity: 1;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10px;
+    &#nav-up {
+      top: -112px;
+    }
+    &__filter {
+      flex-basis: 32.333%;
+      padding: 0;
+    }
+  }
+}

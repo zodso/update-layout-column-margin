@@ -1,0 +1,60 @@
+.update-layout-content__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  .single-post {
+    z-index: 2;
+  }
+  .single-post__content {
+    position: relative;
+  }
+  .single-post__view-more {
+    display: none;
+  }
+  .close__modal {
+    width: 12px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 7px;
+    margin: 6px 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    outline: none;
+  }
+  .close__modal:before,
+  .close__modal:after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 0;
+    border-top: 2px solid $white;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+  .close__modal:after {
+    transform: rotate(-45deg);
+  }
+  .__overlay {
+    background-color: $black;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,21 @@
+
+$value: 0;
+@each $layoutColumn in $layoutColumns {
+  @if($layoutColumn > 5) {
+    $increment: 10;
+    $value: $value + $increment;
+    $fullWidth: 100;
+    $result: append($fullWidth - $value  + "%", "");
+    &[data-show-col="#{$layoutColumn}"] {
+      .single-post__content {
+        font-size: #{$result};
+        padding-bottom: 0;
+        .category,
+        .title,
+        .author {
+          line-height: 100%;
+        }
+      }
+    }
+  }
+}

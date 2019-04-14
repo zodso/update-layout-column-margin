@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6 oldie"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7 oldie"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8 oldie"><![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>update-layout test</title>
+    <meta name="description" content="update-layout test layout page" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="shortcut icon"
+      href="/assets/imgs/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="update-layout-header">
+      <div class="update-layout-header__container">
+        <button class="update-layout-open-menu">
+          <i class="icon-menu"></i>
+        </button>
+        <div class="update-layout-header__logo">
+          <h1>
+            <a href="http://www.update-layout.com">
+              <img src="/assets/imgs/logo.png" alt="update-layout.com" />
+            </a>
+          </h1>
+        </div>
+        <h2>Change layout</h2>
+      </div>
+    </header>
+    <section class="posts-filters">
+      <button class="update-layout-close-menu">
+        <i class="icon-close"></i>
+      </button>
+      <div class="posts-filters__filter">
+        <label>Columns</label>
+        <select id="select_column" name="column">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option selected value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <select id="select_column" name="column" class="mobile">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option selected value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <select id="select_column" name="column" class="mobile">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option selected value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+      <div class="posts-filters__filter">
+        <label>Margin</label>
+        <select id="select_margin" name="margin">
+          <option value="0">0px</option>
+          <option selected value="1.4">20px</option>
+          <option value="2.8">40px</option>
+          <option value="4.8">60px</option>
+          <option value="5.6">80px</option>
+        </select>
+      </div>
+      <div class="posts-filters__filter">
+        <label>Transition</label>
+        <select id="select_transition" name="effect">
+          <option value="fade">Fading</option>
+          <option value="slide">Left sliding</option>
+          <option selected value="zoom">Zoom-in image</option>
+          <option value="filter">Color transition</option>
+        </select>
+      </div>
+    </section>
+    <section class="update-layout-page">
+      <div class="update-layout-page__overlay">
+        <img src="assets/imgs/loader.gif" alt="loader" class="loader_img" />
+      </div>
+      <section class="posts-container"></section>
+    </section>
+    <footer class="update-layout-footer">
+      <div class="update-layout-footer__container">
+        <div class="update-layout-footer__copyright">
+          <p>
+            Powered by Daniele Garito - Copyright &#9400; 2019 Daniele Garito - All Rights
+            Reserved
+          </p>
+        </div>
+      </div>
+      <a id="return-top" class="up_white icon" href="" title="return top"></a>
+      <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    </footer>
+  </body>
+</html>
